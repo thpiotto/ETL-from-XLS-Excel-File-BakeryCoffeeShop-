@@ -1,10 +1,10 @@
 from python_files.utils import *
 from python_files import import_data
 
-path_file = "input_files/file 062021.xls"
+path_file = "input_files/exemple file.xls"
 data_captured = import_data.import_from_xls(path_file)
-file1_output = open('output_files/Vendas por Produto.csv', 'w') # Create a new CSV File for Sale per Product
-file2_output = open('output_files/Info Pagamentos por Venda.csv', 'w') # Create a new CSV File for Payments Info per Sale
+file1_output = open('output_files/Sales by Product.csv', 'w') # Create a new CSV File for Sale per Product
+file2_output = open('output_files/Payment Info by Sales.csv', 'w') # Create a new CSV File for Payments Info per Sale
 
 all_payments = data_captured[0]
 all_sales = data_captured[1]
