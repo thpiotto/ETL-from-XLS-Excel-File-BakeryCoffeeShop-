@@ -24,17 +24,29 @@ Negado a proposta (como foi o caso) pela a outra empresa terceirizada que detinh
 
 Em reunião com os analistas financeiros, perguntei quais dados do relatório gerado pelo ERP eram pertinentes. Na imagem seguinte eu destaquei em **verde** as informações que me foram apontadas como importantes. 
 
+#### Formato de Entrada:
+
 ![worksheetPart1](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/part1.png)
 
 ![worksheetPart2](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/part2.png)
 
 **OBS:** O relatório original é inteiramente em português, eu traduzi propositalmente pro inglês para fins de tornar público de forma universal esse projeto.
 
-**OBS²:** Os relatórios originais continham de 3000 a 4000 KBs (Em torno de 30mil linhas de dados financeiros mensais), o arquivo disposto neste GitHub é apenas um exemplo com apenas 69 KBs.
+**OBS²:** Os relatórios originais continham de 3000 a 4000 KBs (em torno de 30mil linhas de dados financeiros mensais), o arquivo disposto neste GitHub é apenas um exemplo com apenas 69 KBs.
 
 ![originalDiff](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/exemploKB.png)
 
-### Etapa4 - Testes
+#### Formato de Saída:
+
+A saída foram dois arquivos em formato CSV para serem lidos automaticamente pela plataforma de business intelligence que a empresa de consultoria utiliza. 
+
+O primeiro arquivo **Vendas por Produto.csv** (Sales by Product.csv) contendo respectivamente as seguintes informações: **código do produto** ; **descrição do produto** ; **unidade de medida** ; **data da emissão da venda** ; **hora da venda** ; **código do documento** ; **quantidade do item vendido** ; **preço do produto por unidade** ; **desconto no preço** ; **adição no preço** ; **valor final pelo produto**.
+
+O segundo arquivo **Informação de Pagamento por Venda.csv** (Payment Info by Sales.csv) contendo respectivamente as seguintes informações: **data da emissão da venda** ; **hora da venda** ; **código do documento** ; **método de pagamento adotado** ; **valor pago neste método escolhido**.
+
+Em ambos os arquivos encontra-se o campo **código do documento** para manter o relacionamento entre os dados.
+
+### Etapa4 - 
 
 Testes
 
