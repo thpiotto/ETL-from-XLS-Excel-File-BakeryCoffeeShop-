@@ -24,25 +24,23 @@ Negado a proposta (como foi o caso) pela a outra empresa terceirizada que detinh
 
 Em reunião com os analistas financeiros, perguntei quais dados do relatório gerado pelo ERP eram pertinentes. Na imagem seguinte eu destaquei em **verde** as informações que me foram apontadas como importantes. 
 
+![worksheetPart1](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/part1.png)
+
 ![part1](C:\Users\THPL\Desktop\NK - Sabor e Cia\github-img\part1.png)
 
-
+![worksheetPart2](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/part2.png)
 
 ![part2](C:\Users\THPL\Desktop\NK - Sabor e Cia\github-img\part2.png)
-
-
 
 **OBS:** O relatório original é inteiramente em português, eu traduzi propositalmente pro inglês para fins de tornar público de forma universal esse projeto.
 
 **OBS²:** Os relatórios originais continham de 3000 a 4000 KBs (Em torno de 30mil linhas de dados financeiros mensais), o arquivo disposto neste GitHub é apenas um exemplo com apenas 69 KBs.
+
+![originalDiff](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/exemploKB.png)
 
 ![exemploKB](C:\Users\THPL\Desktop\NK - Sabor e Cia\github-img\exemploKB.png)
 
 ### Etapa4 - Testes
 
 Testes
-
-### ...
-
-## DONE
 
