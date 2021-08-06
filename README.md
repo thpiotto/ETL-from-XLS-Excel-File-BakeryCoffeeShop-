@@ -46,7 +46,37 @@ O segundo arquivo **Informação de Pagamento por Venda.csv** (Payment Info by S
 
 Em ambos os arquivos encontra-se o campo **código do documento** para manter o relacionamento entre os dados.
 
-### Etapa4 - 
+### Etapa4 - Desenvolvimento do código em Python
 
-Testes
+Basicamente o software tem dois arquivos de código principais (por enquanto), o **`import_data.py`**, dentro do diretório /python_files, e o **`main.py`** no diretório raiz.
+
+O primeiro arquivo citado é uma função geral que recebe como argumento o caminho do arquivo XLS, que contem todas as regras de captura dos dados, tal como outras funções locais mantendo organização do código e boas práticas para futuras manutenções facilitadas.
+
+Já o segundo arquivo (**`main.py`**) contem as regras de escrita e saída do arquivo final depois que recebe o retorno do resultado da função inserida no **`import_data.py`**. Sim, pra manter a legibilidade e boas práticas, eu poderia ter criado outro arquivo Python com funções de escrita do arquivo de saída, mas como o programa é pequeno, não achei pertinente.
+
+Dentro desse projeto será encontrado um arquivo chamado **`pers.py`** dentro do diretório /config que eu usaria pra comunicar com o banco de dados caso a empresa terceirizada tivesse fornecido o acesso de consulta ao banco diretamente.
+
+### Etapa5 - Arquivos de saída em CSV
+
+Como já foi explanado na **Etapa3**/Formato de Saída desde README, os arquivos de saída deveriam sair na ordem pedida pelos analistas financeiros da empresa de consultoria, eis o resultado, da forma que foi solicitado:
+
+**Vendas por Produto.csv** (Sales by Product.csv)
+
+![individual_output](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/individual_output.png)
+
+
+
+**Informação de Pagamento por Venda.csv** (Payment Info by Sales.csv)
+
+![payment_output](https://github.com/thplira/ETL-from-XLS-Excel-File-BakeryCoffeeShop-/blob/master/github-img/payment_output.png)
+
+
+
+Ambos arquivos, apesar da imagem mostrar em planilha (por conta da regra do CSV), são arquivos texto puros. Sendo assim, não contendo nenhum meta-dado que normalmente planilhas em XLS/XLSX contêm e aumentando a velocidade de processamento das plataformas de business intelligence lerem seu conteúdo.
+
+
+
+### Etapa6 - Possíveis próximos passos
+
+Caso eu consiga o acesso direto ao banco de dados do cliente, poderei trabalhar numa função paralela a aquela que captura os dados do XLS e implementarei SELECT QUERYs direto no Python em comunicação com o banco de dados para tratar os dados direto da fonte. Assim, diminuindo ainda mais a necessidade de interação homem-maquina, que atualmente ainda retiram o relatório do ERP "manualmente".
 
