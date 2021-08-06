@@ -1,4 +1,4 @@
-from python_files.utils import do_nothing
+#from python_files.utils import do_nothing
 from xlrd import open_workbook
 
 def general_sales_info(row):
@@ -7,7 +7,7 @@ def general_sales_info(row):
     """
     if row[5].find(":") == 2:
         return True
-    elif row[0] == "" and row[17] != "":
+    elif row[0] == "" and isinstance(row[18], float):
         return True
     elif row[0] == "Item":
         return False
@@ -25,7 +25,7 @@ def individual_sales_stop(row):
     """
     Find the pivot data in the XLS file cells to STOP capturing individual information for each item sold.
     """
-    if row[1] == "Totais":
+    if row[1] == "Total":
         return True
     return False
 
@@ -80,17 +80,17 @@ def import_from_xls(path_file):
                 item_addition = row[9]
                 item_final_value = row[10]
                 local_sale = (item_code, item_description, item_type, emission, hour, document,\
-                    item_quantity, item_price, item_descount, item_addition, item_final_value) # This left pipeline is just a line breaker
+                            item_quantity, item_price, item_descount, item_addition, item_final_value) # This left pipeline is just a line breaker
                 all_sales.append(local_sale)
                 #print(f"\n>> {counter}  {all_sales}") # DEBBUG
             
             counter += 1
 
     except:
-        do_nothing
+        pass
     
     return [all_payments, all_sales]
 
 # These two lines should be uncommented only in case you want to use only this module for debugging
-#path_file = "arquivo.xls" # Inform the file path
+#path_file = "input_files/exemple file.xls" # Inform the file path
 #import_from_xls(path_file)

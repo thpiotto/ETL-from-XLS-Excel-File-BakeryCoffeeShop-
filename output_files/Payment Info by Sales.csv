@@ -1,6 +1,7 @@
-Emission;Hour;Document;Payment;Payment Value
+emission;hour;document;payment;payment_value
 01/05/21;07:50:53;1/00016572;Debit Card;18,58
-01/05/21;07:59:08;1/00016573;Debit Card;25,5
+03/05/21;17:59:44;1/00016707;Credit Card;20,59
+03/05/21;17:59:44;1/00016707;Bank Transfer;15,0
 01/05/21;08:10:32;1/00016574;Debit Card;18,57
 01/05/21;08:47:02;1/00016575;Debit Card;43,87
 01/05/21;08:57:55;1/00016576;Debit Card;47,1

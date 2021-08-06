@@ -9,6 +9,12 @@ file2_output = open('output_files/Payment Info by Sales.csv', 'w') # Create a ne
 all_payments = data_captured[0]
 all_sales = data_captured[1]
 
+column_description1 = "item_code;item_description;item_type;emission;hour;document;\
+item_quantity;item_price;item_descount;item_addition;item_final_value\n"
+column_description2 = "emission;hour;document;payment;payment_value\n"
+file1_output.write(column_description1)
+file2_output.write(column_description2)
+
 for _ in all_sales:
     
     line = f"{_[0]};{_[1]};{_[2]};{_[3]};{_[4]};{_[5]};{brazil_currency_notation(_[6])};\
